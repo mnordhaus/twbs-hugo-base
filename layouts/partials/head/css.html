@@ -1,0 +1,22 @@
+
+{{- /*
+{{- $sassOptions := dict "targetPath" "css/style.css" "outputStyle" "expanded" "precision" 6 -}}
+{{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
+
+{{- if hugo.IsProduction -}}
+  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{- $style := resources.Get "scss/style.scss" | toCSS $sassOptions | postCSS $postcssOptions | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+*/ -}}
+{{ $opts := dict
+  "transpiler" "dartsass"
+  "targetPath" "css/style.css"
+  "vars" site.Params.styles
+  "enableSourceMap" (not hugo.IsProduction)
+  "includePaths" (slice "node_modules/bootstrap/scss")
+}}
+{{ with resources.Get "scss/main.scss" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}

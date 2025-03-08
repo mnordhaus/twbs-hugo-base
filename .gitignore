@@ -398,3 +398,29 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+resources/_gen/assets/scss/main.scss_7406b1e122c4d076c74a4f038c61f33a.content
+resources/_gen/assets/scss/main.scss_7406b1e122c4d076c74a4f038c61f33a.json
+public/favicon.ico
+public/index.html
+public/index.xml
+public/sitemap.xml
+public/categories/index.html
+public/categories/index.xml
+public/css/style.css.map
+public/css/style.min.c909ed93a798836499b227ad14e2c530208157c5df8caf8016ee27f4eb61b9e6.css
+public/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js
+public/js/main.js
+public/posts/index.html
+public/posts/index.xml
+public/posts/post-1/index.html
+public/posts/post-2/index.html
+public/posts/post-3/bryce-canyon.jpg
+public/posts/post-3/index.html
+public/tags/index.html
+public/tags/index.xml
+public/tags/blue/index.html
+public/tags/blue/index.xml
+public/tags/green/index.html
+public/tags/green/index.xml
+public/tags/red/index.html
+public/tags/red/index.xml
